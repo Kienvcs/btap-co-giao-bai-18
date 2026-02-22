@@ -78,31 +78,12 @@
     </div>
     <div id="cursor"></div>
 
-<script>
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    window.addEventListener('click', function() {
-        const audio = new Audio("https://docs.google.com/uc?export=download&id=1PSoSqQdFfvA9jAeR0kjD8Oyy-wJoCShd" type="audio/mpeg");
-        audio.loop = true;
-        audio.volume = 0.3;
-        audio.play();
-        
-        const title = document.querySelector('.banner h1') || document.querySelector('.banner h2');
-        const text = title.innerText;
-        let i = 0;
-        title.innerText = '';
-        const typing = setInterval(() => {
-            if (i < text.length) {
-                title.innerText += text.charAt(i);
-                i++;
-            } else { clearInterval(typing); }
-        }, 100);
-    }, { once: true });
-</script>
+<iframe width="0" height="0" 
+    src="https://www.youtube.com/embed/HK2eoCbiBPg?autoplay=1&mute=0&controls=0&showinfo=0&rel=0" 
+    title="Vạn Sự Như Ý Autoplay" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media">
+</iframe>
 
 </body>
 </html>
