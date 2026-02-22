@@ -13,25 +13,26 @@ body {
 }
 
 .banner {
-    background: linear-gradient(Black, Black), 
-                url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop") no-repeat center center !important;
+    background-image: linear-gradient(black, transparent), 
+                      url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600") !important;
+    background-color: black !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
     background-size: cover !important;
     width: 100%;
     padding: 10rem 0;
     text-align: center !important;
-    border-bottom: 2px solid Lime;
+    border-bottom: 2px solid lime;
 }
 
 div a { 
     text-decoration: none; 
-    color: Lime; 
-    font-weight: bold;
-    transition: 0.3s; 
+    color: cyan; 
+    font-weight: bold; 
 }
 
 div a:hover { 
-    color: White; 
-    text-shadow: 0 0 10px Lime; 
+    color: white; 
 }
 
 .slogan {
