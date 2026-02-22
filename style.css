@@ -1,40 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 @charset "utf-8";
 
 body {
-    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+    font-family: 'Share Tech Mono', 'Segoe UI', monospace !important;
     line-height: 1.6;
-    color: #333333;
+    background-color: Black !important;
+    color: Lime !important;
+    cursor: none; 
 }
 
 .banner {
-    background: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80") no-repeat center center;
-    background-size: cover;
+    background: linear-gradient(Black, Black), 
+                url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop") no-repeat center center !important;
+    background-size: cover !important;
     width: 100%;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding: 10rem 0;
     text-align: center !important;
-    color: Cyan !important;
+    border-bottom: 2px solid Lime;
 }
 
 div a { 
     text-decoration: none; 
+    color: Lime; 
+    font-weight: bold;
     transition: 0.3s; 
 }
 
 div a:hover { 
-    color: RoyalBlue; 
+    color: White; 
+    text-shadow: 0 0 10px Lime; 
 }
 
 .slogan {
-    background-color: GhostWhite !important;
+    background-color: DarkGreen !important;
     text-align: center !important;
     width: 100%;
     padding: 5rem 3rem;
 }
 
+.content {
+    background-color: transparent !important;
+    text-align: center !important;
+    width: 100%;
+    padding: 5rem 3rem;
+}
+
+.content td {
+    padding: 20px;
+    border: 1px solid DarkSlateGrey;
+}
+
+.content img {
+    border-radius: 5px;
+    filter: grayscale(100%) brightness(0.8);
+    transition: 0.5s;
+}
+
+.content img:hover {
+    filter: grayscale(0%) brightness(1);
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -42,38 +74,53 @@ div a:hover {
 
 .block_3 {
     flex: 0 0 auto;
-    width: 33.3333%;
-    padding: 10px;
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid Black;
+    transition: 0.3s;
 }
 
 .block_3 h3 { 
-    color: DarkBlue; 
+    color: Lime; 
 }
 
-.content {
-    background-color: white !important;
-    text-align: center !important;
-    width: 100%;
-    padding: 5rem 3rem;
+.block_3:hover {
+    border-color: Lime;
+    background: DarkGreen;
+    box-shadow: 0 0 15px Green;
 }
 
 .footer {
-    background-color: #0b0e11 !important; 
-    text-align: center !important; 
+    background-color: Black !important;
+    text-align: center !important;
     color: Grey;
     width: 100%;
     padding: 40px 0;
     font-size: 0.9rem;
+    border-top: 1px solid Lime;
 }
 
 .footer h3 { 
-    color: white; 
+    color: White; 
 }
 
 .footer a { 
-    color: RoyalBlue; 
+    color: Lime; 
 }
 
 .footer a:hover { 
-    color: Cyan; 
+    color: White; 
+}
+
+#cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid Lime;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px Lime;
+    transition: transform 0.1s;
 }
