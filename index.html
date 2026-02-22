@@ -76,5 +76,33 @@
             </div>
         </div>
     </div>
+    <div id="cursor"></div>
+
+<script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    window.addEventListener('click', function() {
+        const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+        audio.loop = true;
+        audio.volume = 0.3;
+        audio.play();
+        
+        const title = document.querySelector('.banner h1') || document.querySelector('.banner h2');
+        const text = title.innerText;
+        let i = 0;
+        title.innerText = '';
+        const typing = setInterval(() => {
+            if (i < text.length) {
+                title.innerText += text.charAt(i);
+                i++;
+            } else { clearInterval(typing); }
+        }, 100);
+    }, { once: true });
+</script>
+
 </body>
 </html>
